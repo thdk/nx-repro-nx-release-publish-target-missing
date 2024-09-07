@@ -1,3 +1,3 @@
 export function someLib(): string {
-  return 'some-lib';
+  return 'some-lib-changed';
 }
