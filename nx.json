@@ -26,7 +26,7 @@
     }
   ],
   "release": {
-    "projects": ["tag:type:app", "tag:type:package"],
+    "projects": ["tag:type:app", "tag:type:package", "some-lib-publishable"],
     "releaseTagPattern": "{projectName}@{version}",
     "projectsRelationship": "independent",
     "conventionalCommits": {
@@ -66,6 +66,7 @@
       }
     },
     "version": {
+      "preVersionCommand": "npx nx run-many -t build",
       "conventionalCommits": true,
       "generatorOptions": {
         "updateDependents": "auto",

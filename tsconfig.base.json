@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-demo-publish/some-lib": ["some-lib/src/index.ts"]
+      "@nx-demo-publish/some-lib": ["some-lib/src/index.ts"],
+      "@nx-demo/some-lib-publishable": ["some-lib-publishable/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

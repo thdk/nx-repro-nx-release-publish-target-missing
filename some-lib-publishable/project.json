@@ -1,0 +1,32 @@
+{
+  "name": "some-lib-publishable",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "some-lib-publishable/src",
+  "projectType": "library",
+  "release": {
+    "version": {
+      "generatorOptions": {
+        "packageRoot": "dist/{projectRoot}",
+        "currentVersionResolver": "git-tag"
+      }
+    }
+  },
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/some-lib-publishable",
+        "main": "some-lib-publishable/src/index.ts",
+        "tsConfig": "some-lib-publishable/tsconfig.lib.json",
+        "assets": ["some-lib-publishable/*.md"]
+      }
+    },
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/{projectRoot}"
+      }
+    }
+  }
+}
