@@ -24,5 +24,63 @@
         "targetName": "lint"
       }
     }
-  ]
+  ],
+  "release": {
+    "projects": ["tag:type:app", "tag:type:package"],
+    "releaseTagPattern": "{projectName}@{version}",
+    "projectsRelationship": "independent",
+    "conventionalCommits": {
+      "types": {
+        "fix": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Bug Fixes"
+          }
+        },
+        "feat": {
+          "semverBump": "minor",
+          "changelog": {
+            "title": "New Features"
+          }
+        },
+        "docs": {
+          "semverBump": "patch",
+          "changelog": {
+            "title": "Documentation Updates"
+          }
+        },
+        "build": {
+          "semverBump": "minor",
+          "changelog": {
+            "title": "Other Updates"
+          }
+        },
+        "chore": {
+          "semverBump": "none",
+          "changelog": false
+        },
+        "style": {
+          "semverBump": "patch",
+          "changelog": false
+        }
+      }
+    },
+    "version": {
+      "conventionalCommits": true,
+      "generatorOptions": {
+        "updateDependents": "auto",
+        "fallbackCurrentVersionResolver": "disk"
+      }
+    },
+    "changelog": {
+      "automaticFromRef": true,
+      "projectChangelogs": {
+        "renderOptions": {
+          "authors": true,
+          "commitReferences": true,
+          "versionTitleDate": true
+        }
+      }
+    }
+  }
 }
