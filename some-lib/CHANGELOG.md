@@ -1,3 +1,15 @@
+## 0.2.1 (2024-09-07)
+
+
+### Bug Fixes
+
+- make some-lib public
+
+
+### ❤️  Thank You
+
+- Thomas Dekiere
+
 ## 0.2.0 (2024-09-07)
 
 
